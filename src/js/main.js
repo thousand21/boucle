@@ -149,5 +149,86 @@ ra.forEach(element => {
 ## A l'aide l'un foreach, affichez les prenom des students qui commenecent par (A, F, G, I, H, L, M) en majuscule, les autres en minuscule */
 let tab4=["Adil","Agim","Ali","Antoine","Chris","Elvis","Fanny","Haroune","Ilias D","Ilias El","Jean","Kevin","Lira","Mouna","Nasila","Nathan","Seif","Stan","Van Hoa","Yassine"];
 tab4.forEach(element => {
-
+    if((element.charAt(0)==("a"||"A")) || (element.charAt(0)==("f"||"F") )||(element.charAt(0)==("g"||"G")) ||(element.charAt(0)==("i"||"I")) ||(element.charAt(0)==("h"||"H")) ||(element.charAt(0)==("l"||"L"))|| (element.charAt(0)==("m"||"M") )){
+        element.toUpperCase;
+    }
 })
+console.log(tab4);
+
+/* # Exercice 1 boucle while
+- A l'aide d'un prompt, choisissez un chiffre et enregistrez la valeur dans une variable
+- Déclarez une variable compteur qui commence par 0
+- A l'aide d'une boucle while, incrémentez de 1 la variable compteur à chaque boucle et affichez touts les chiffres de 0 jusqu'au nombre choisis au debut dans le prompt */
+
+let chiff=Number(prompt("donne un chiffre de 1 a 10"));
+ compteur=0;
+
+while(compteur<chiff){
+    
+    console.log(compteur);
+    compteur++;
+}
+
+/* - # Exo 2 Boucles WHILE
+    - ## Créez une variable classe avec un array
+    - ## A l'aide d'un prompt, choisissez le nombre max d'étudiants dans la classe
+    - ## A l'aide d'une boucle while, inserez des étudiants dans la classe tant que la classe n'est pas remplie
+    - ## Après avoir rempli la classe, affichez tous les etudiants */
+    let classe1=[];
+    let nbremaxet=Number(prompt("quel est le nbre max detudiants"));
+    compteur=1;
+    while(classe1.length<nbremaxet){
+        classe1.push("etudiant"+compteur);
+        compteur++;
+    }
+    console.log(classe1);
+/* - ##  Ex 03
+    ## Créer un tableau de 9 prénoms 
+    ## Faire une boucle sur les prénoms précédé de Bonjour tant que 9 n'est pas atteint et les affiché dans la console
+    ## Astuce : let i = 0;
+    ## Astuce 2 : (i < 9) */
+    let class2=["a","b","c","d","e","f","g","h","i"];
+    let i=0;
+    while(i<9){
+        console.log("bonjour "+class2[i]);
+        i++;
+    }
+
+/* - ##  Exo 04
+    ## Créer un tableau de 6 fruits
+    ## Avec l'aide d'une boucle while vider le tableau.
+    ## Utilisez fruits.length */
+    let fruits=["pomme","poire","fraise","tomate","melon","dragon"];
+    let longueur=fruits.length;
+    console.log(fruits);
+    while(longueur>0){
+        fruits.shift();
+        longueur--;
+    }
+    console.log(fruits);
+
+/* - ##  Exo 05
+    ## Créer un tableau de 4 légumes du nom de 'panierLegumes'
+    ## Stocker la longueur du tableau dans une variable du nom de 'longeur'
+    # Vider le tableau panierLegumes pour mettre son contenu dans un second tableau du nom de 'caisseLegumes' */
+    let legum=["salade","tomate","pdt","brocoli"];
+    let caisseLegumes=[];
+    longueur=legum.length;
+    console.log(legum);
+    while(longueur>0){
+        caisseLegumes.push(legum[0]);
+        legum.shift();
+        longueur--;
+    }
+    console.log(legum);
+    console.log(caisseLegumes);
+
+
+/* - ##  Exo6
+    ##  Préparer une énigme, et faites une boucle WHILE qui va vérifier si l'utilisateur répond correctement à l'énigme via un prompt, tant qu'il se trompe, vous lui reposer la question. S'il a juste, faites une alerte qui le félicite */
+    let uti=prompt("Il faut combien de dragon balls pour invoquer shenron");
+    let reponse=7;
+    while(uti!=reponse){
+         uti=prompt("Faux, Il faut combien de dragon balls pour invoquer shenron");
+    }
+    alert("GG");
